@@ -44,7 +44,7 @@ public class UserService extends ServiceManager<User,Long> {
             update(user.get());
             return true;
     }
-    public Boolean delete(Long id){
+    public Boolean deleteUser(Long id){
         Optional<User> user = findById(id);
         if(user.isEmpty())
             throw new SmpServiceException(ErrorType.USERNAME_NOT_FOUND);

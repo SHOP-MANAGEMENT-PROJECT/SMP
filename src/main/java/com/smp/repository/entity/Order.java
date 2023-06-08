@@ -22,7 +22,9 @@ public class Order extends BaseEntity {
     private Long contentId;
     private Long userId;
     private double totalPrice;
-    private EOrderStatus orderStatus;
+    @Enumerated(EnumType.STRING)
+    @Builder.Default
+    private EOrderStatus orderStatus=EOrderStatus.ACTIVE;
 
 
 }

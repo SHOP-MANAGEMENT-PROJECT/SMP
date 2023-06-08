@@ -1,5 +1,5 @@
 package com.smp.repository.entity.enums;
 
-public enum ETableStatus {
+public enum EStatus {
     ACTIVE,PASSIVE
 }

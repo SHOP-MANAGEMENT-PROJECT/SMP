@@ -6,6 +6,7 @@ import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 import javax.persistence.Table;
+import java.util.List;
 
 @SuperBuilder
 @Data
@@ -19,7 +20,8 @@ public class Order extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long tableId;
-    private Long contentId;
+    @ElementCollection
+    private List<Long> contentId;
     private Long userId;
     private double totalPrice;
     @Enumerated(EnumType.STRING)

@@ -24,4 +24,6 @@ public class ApiUrls {
     public static final String FINDALLBYDETAIL = "/findallbydetail";
     public static final String FINDBYID = "/findbyid";
     public static final String FINDALLVOCATIONBYEMPLOYEEID = "/findaddvocationbyemployeeid";
+    public static final String SETSTATUSCLOSED = "/setstatusclosed";
+    public static final String SETSTATUSCHECKED = "/setstatuschecked";
 }

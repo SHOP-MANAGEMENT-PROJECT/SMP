@@ -28,9 +28,12 @@ public enum ErrorType {
     EXPENSE_NOT_VALID(6002,"Expense not valid",HttpStatus.BAD_REQUEST ),
     INVALID_TOKEN(5001,"Token not created",HttpStatus.BAD_REQUEST),
     INTERNAL_ERROR(5100,"Eternal Error",HttpStatus.INTERNAL_SERVER_ERROR),
-    BAD_REQUEST(4100,"Parameter Error",HttpStatus.BAD_REQUEST);
+    BAD_REQUEST(4100,"Parameter Error",HttpStatus.BAD_REQUEST),
+    ORDER_NOT_FOUND(4101,"ID NOT FOUND",HttpStatus.BAD_REQUEST)
 
 
+
+    ;
     private int code;
     private String message;
      HttpStatus httpStatus;

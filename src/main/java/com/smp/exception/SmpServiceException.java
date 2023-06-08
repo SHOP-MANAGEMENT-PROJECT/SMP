@@ -3,15 +3,15 @@ package com.smp.exception;
 import lombok.Getter;
 
 @Getter
-public class EmployeeServiceException extends RuntimeException{
+public class SmpServiceException extends RuntimeException{
     private final ErrorType errorType;
 
-    public EmployeeServiceException(ErrorType errorType){
+    public SmpServiceException(ErrorType errorType){
         super(errorType.getMessage());
         this.errorType = errorType;
     }
 
-    public EmployeeServiceException(ErrorType errorType, String message){
+    public SmpServiceException(ErrorType errorType, String message){
         super(message);
         this.errorType = errorType;
     }

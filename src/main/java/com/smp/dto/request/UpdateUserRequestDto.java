@@ -1,31 +1,19 @@
-package com.smp.repository.entity;
+package com.smp.dto.request;
 
 import com.smp.repository.entity.enums.ERole;
 import lombok.*;
-import lombok.experimental.SuperBuilder;
 
-import javax.persistence.*;
-import javax.persistence.Table;
-
-@SuperBuilder
+@Builder
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Table(name = "tbl_user")
-@Entity
-public class User extends BaseEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class UpdateUserRequestDto {
     private String userName;
     private String password;
     private String name;
     private String secondName;
     private String lastName;
     private String secondLastName;
-
-
     private ERole eRole;
-
 }

@@ -18,6 +18,7 @@ public enum ErrorType {
     IDENTIFICATIONNUMBER_DUPLICATE(4004,"IdentificationNumber is already exist",HttpStatus.BAD_REQUEST),
     USER_NOT_CREATED(4005,"User not created",HttpStatus.BAD_REQUEST ),
     NAME_DUPLICATE(4006,"Name is already exist",HttpStatus.BAD_REQUEST),
+    TABLE_DUPLICATE(4007,"Table is already exist",HttpStatus.BAD_REQUEST),
     VOCATION_NOT_CREATED(3001,"Vocation not created",HttpStatus.BAD_REQUEST ),
     VOCATION_NOT_VALID(3002,"Vocation not valid",HttpStatus.BAD_REQUEST ),
     VOCATION_DURATION_NOT_BE_MINUS(3004,"Vocation not be valid",HttpStatus.BAD_REQUEST ),
@@ -29,7 +30,8 @@ public enum ErrorType {
     INVALID_TOKEN(5001,"Token not created",HttpStatus.BAD_REQUEST),
     INTERNAL_ERROR(5100,"Eternal Error",HttpStatus.INTERNAL_SERVER_ERROR),
     BAD_REQUEST(4100,"Parameter Error",HttpStatus.BAD_REQUEST),
-    ORDER_NOT_FOUND(4101,"ID NOT FOUND",HttpStatus.BAD_REQUEST)
+    ORDER_NOT_FOUND(4101,"ID NOT FOUND",HttpStatus.BAD_REQUEST),
+    TABLE_NOT_FOUND(4102,"TABLE NOT FOUND",HttpStatus.BAD_REQUEST)
 
 
 

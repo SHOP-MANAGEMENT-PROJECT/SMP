@@ -1,5 +1,6 @@
 package com.smp.repository.entity;
 
+import com.smp.repository.entity.enums.EStatus;
 import com.smp.repository.entity.enums.EType;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
@@ -19,7 +20,11 @@ public class Content extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private double price;
+    private Double price;
+    @Enumerated(EnumType.STRING)
     private EType type;
+    @Enumerated(EnumType.STRING)
+    @Builder.Default
+    private EStatus status=EStatus.ACTIVE;
 
 }

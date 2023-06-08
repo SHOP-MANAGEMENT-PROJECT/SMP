@@ -1,11 +1,12 @@
 package com.smp.repository.entity;
 
-import com.smp.repository.entity.enums.ETableStatus;
+import com.smp.repository.entity.enums.EStatus;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 
-@Builder
+@SuperBuilder
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -17,6 +18,8 @@ public class Desk extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String tableName;
-    private ETableStatus tableStatus;
+    @Enumerated(EnumType.STRING)
+    @Builder.Default
+    private EStatus tableStatus=EStatus.PASSIVE;
 
 }

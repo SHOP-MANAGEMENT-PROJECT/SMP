@@ -24,8 +24,7 @@ public class User extends BaseEntity {
     private String secondName;
     private String lastName;
     private String secondLastName;
-
-
+    @Enumerated(EnumType.STRING)
     private ERole eRole;
 
 }

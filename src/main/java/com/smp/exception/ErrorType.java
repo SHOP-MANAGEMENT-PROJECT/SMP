@@ -12,10 +12,12 @@ public enum ErrorType {
 
     USERNAME_DUPLICATE(4001,"Username is already exist",HttpStatus.BAD_REQUEST),
 
+
     PASSWORD_UNMATCH(4002,"Passwords are not matched",HttpStatus.BAD_REQUEST),
     USERNAME_NOT_FOUND(4003,"Username not found",HttpStatus.BAD_REQUEST),
     IDENTIFICATIONNUMBER_DUPLICATE(4004,"IdentificationNumber is already exist",HttpStatus.BAD_REQUEST),
     USER_NOT_CREATED(4005,"User not created",HttpStatus.BAD_REQUEST ),
+    NAME_DUPLICATE(4006,"Name is already exist",HttpStatus.BAD_REQUEST),
     VOCATION_NOT_CREATED(3001,"Vocation not created",HttpStatus.BAD_REQUEST ),
     VOCATION_NOT_VALID(3002,"Vocation not valid",HttpStatus.BAD_REQUEST ),
     VOCATION_DURATION_NOT_BE_MINUS(3004,"Vocation not be valid",HttpStatus.BAD_REQUEST ),
@@ -26,10 +28,9 @@ public enum ErrorType {
     EXPENSE_NOT_VALID(6002,"Expense not valid",HttpStatus.BAD_REQUEST ),
     INVALID_TOKEN(5001,"Token not created",HttpStatus.BAD_REQUEST),
     INTERNAL_ERROR(5100,"Eternal Error",HttpStatus.INTERNAL_SERVER_ERROR),
-    BAD_REQUEST(4100,"Parameter Error",HttpStatus.BAD_REQUEST),
+    BAD_REQUEST(4100,"Parameter Error",HttpStatus.BAD_REQUEST);
 
 
-  ;
     private int code;
     private String message;
      HttpStatus httpStatus;

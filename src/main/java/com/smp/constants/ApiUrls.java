@@ -2,10 +2,10 @@ package com.smp.constants;
 
 public class ApiUrls {
     public static final String VERSION = "api/v1";
-    public static final String EMPLOYEE = VERSION+"/employee";
-    public static final String VOCATION= VERSION+"/vocation";
-    public static final String EXPENSE= VERSION+"/expense";
-    public static final String ADVANCE= VERSION+"/advance";
+    public static final String USER = VERSION+"/user";
+    public static final String CONTENT= VERSION+"/content";
+    public static final String DESK= VERSION+"/desk";
+    public static final String ORDER= VERSION+"/order";
     public static final String CREATE ="/create";
     public static final String SAVE = "/save";
     public static final String UPDATE = "/update";

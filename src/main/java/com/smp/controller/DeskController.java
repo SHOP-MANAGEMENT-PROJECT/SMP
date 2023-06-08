@@ -24,4 +24,5 @@ public class DeskController {
     public ResponseEntity<Boolean> createDesk(@RequestBody NewCreateDeskRequest dto){
         return ResponseEntity.ok(deskService.createDesk(dto));
     }
+    //düzelttim
 }

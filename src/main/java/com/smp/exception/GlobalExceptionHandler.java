@@ -39,7 +39,6 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-
     public final ResponseEntity<ErrorMessage> handleMethodArgumentNotValidException(MethodArgumentNotValidException exception){
         ErrorType errorType=ErrorType.BAD_REQUEST;
         List<String> fields=new ArrayList<>();
@@ -50,7 +49,6 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(HttpMessageNotReadableException.class)
-
     public final ResponseEntity<ErrorMessage> handleMessageNotReadableException(
             HttpMessageNotReadableException exception) {
         ErrorType errorType = ErrorType.BAD_REQUEST;
@@ -58,7 +56,6 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(InvalidFormatException.class)
-
     public final ResponseEntity<ErrorMessage> handleInvalidFormatException(
             InvalidFormatException exception) {
         ErrorType errorType = ErrorType.BAD_REQUEST;
@@ -67,7 +64,6 @@ public class GlobalExceptionHandler {
 
 
     @ExceptionHandler(MethodArgumentTypeMismatchException.class)
-
     public final ResponseEntity<ErrorMessage> handleMethodArgumentMisMatchException(
             MethodArgumentTypeMismatchException exception) {
 
@@ -76,7 +72,6 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(MissingPathVariableException.class)
-
     public final ResponseEntity<ErrorMessage> handleMethodArgumentMisMatchException(
             MissingPathVariableException exception) {
 
@@ -84,14 +79,12 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(createError(errorType, exception), errorType.getHttpStatus());
     }
     @ExceptionHandler(DataIntegrityViolationException.class)
-
     public final ResponseEntity<ErrorMessage> handlePsqlException(DataIntegrityViolationException exception){
         ErrorType errorType=ErrorType.USERNAME_DUPLICATE;
         return new ResponseEntity<>(createError(errorType,exception),errorType.getHttpStatus());
     }
 
     @ExceptionHandler(Exception.class)
-
     public final ResponseEntity<ErrorMessage> handleAllExceptions(Exception exception) {
         ErrorType errorType = ErrorType.INTERNAL_ERROR;
         List<String> fields = new ArrayList<>();

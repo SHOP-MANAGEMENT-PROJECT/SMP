@@ -22,10 +22,16 @@ public class UserService extends ServiceManager<User,Long> {
     }
 
     public Boolean createUser(NewCreateUserRequestDto dto) {
-        if (userRepository.findOptionalByUserName(dto.getUserName()).isPresent())
-            throw new SmpServiceException(ErrorType.USERNAME_DUPLICATE);
+        Optional<User> user2=userRepository.findOptionalByUserName(dto.getUserName());
+        System.out.println("get user");
+        if (user2.isPresent()){
+            System.out.println(" user");
+            throw new SmpServiceException(ErrorType.USERNAME_DUPLICATE);}
+        System.out.println("throw user");
             User user = IUserMapper.INSTANCE.toUser(dto);
+        System.out.println("mapper user");
             save(user);
+        System.out.println("save user");
         return true;
     }
 

@@ -22,15 +22,15 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping(CREATE)
-    public ResponseEntity<Boolean> createContent(@RequestBody NewCreateUserRequestDto dto){
+    public ResponseEntity<Boolean> createUser(@RequestBody NewCreateUserRequestDto dto){
         return ResponseEntity.ok(userService.createUser(dto));
     }
     @PutMapping(UPDATE)
-    public ResponseEntity<Boolean> updateContent(@RequestBody UpdateUserRequestDto dto){
+    public ResponseEntity<Boolean> updateUser(@RequestBody UpdateUserRequestDto dto){
         return ResponseEntity.ok(userService.updateUser(dto));
     }
     @DeleteMapping(DELETEBYID)
-    public ResponseEntity<Boolean> deleteContent(@RequestBody Long id){
+    public ResponseEntity<Boolean> deleteUser(@RequestBody Long id){
         return ResponseEntity.ok(userService.deleteUser(id));
     }
 
